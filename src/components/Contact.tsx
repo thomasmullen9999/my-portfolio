@@ -1,27 +1,52 @@
-// src/components/Contact.tsx
+import "./Contact.css";
+
 export default function Contact() {
   return (
-    <section className="text-center my-20 px-4">
-      <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-      <p className="text-gray-400">
-        Email me at{" "}
-        <a
-          href="mailto:thomasmullen9999@gmail.com"
-          className="text-primary underline"
-        >
-          thomasmullen9999@gmail.com
-        </a>
-      </p>
-      <p>
-        GitHub:{" "}
-        <a href="https://github.com/thomasmullen9999">thomasmullen9999</a>
-      </p>
-      <p>
-        LinkedIn:{" "}
-        <a href="https://www.linkedin.com/in/thomas-mullen-2591932b2/">
-          Thomas Mullen
-        </a>
-      </p>
-    </section>
+    <footer className="contact-footer">
+      <div className="contact-container">
+        <h2 className="contact-heading">Get in Touch</h2>
+
+        <div className="contact-links">
+          <a
+            href="mailto:thomasmullen9999@gmail.com"
+            className="contact-link"
+            aria-label="Send Email"
+          >
+            <span className="contact-icon" role="img" aria-hidden="true">
+              📧
+            </span>
+            Email
+          </a>
+          <a
+            href="https://github.com/thomasmullen9999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="GitHub Profile"
+          >
+            <span className="contact-icon" role="img" aria-hidden="true">
+              🐙
+            </span>
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thomas-mullen-2591932b2/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="LinkedIn Profile"
+          >
+            <span className="contact-icon" role="img" aria-hidden="true">
+              💼
+            </span>
+            LinkedIn
+          </a>
+        </div>
+
+        <p className="contact-copy">
+          &copy; 2025 Your Name. All rights reserved.
+        </p>
+      </div>
+    </footer>
   );
 }

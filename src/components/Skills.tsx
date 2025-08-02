@@ -19,7 +19,7 @@ const Skills = () => {
               height={48}
               className="skill-icon"
             />
-            <p>{skill.name}</p>
+            <p className="skill-name">{skill.name}</p>
           </div>
         ))}
       </div>

@@ -1,19 +1,27 @@
 import { certifications } from "@/data/certifications";
+import "./Certifications.css";
 
 export default function Certifications() {
   return (
-    <section className="max-w-3xl mx-auto my-16 px-4">
-      <h2 className="text-3xl font-bold mb-6">Certifications</h2>
-      <div className="space-y-4">
+    <section className="certifications-section">
+      <h2 className="certifications-title">Certifications</h2>
+      <div className="certifications-list">
         {certifications.map((cert) => (
-          <div key={cert.title} className="bg-gray-800 p-4 rounded-xl">
-            <h3 className="text-lg font-semibold">{cert.title}</h3>
-            <p className="text-gray-400">
-              {cert.issuer} | {cert.date}
-            </p>
-            <img width={400} src={cert.imagesrc}></img>
-            <p className="text-gray-400">{cert.description}</p>
-            <br></br>
+          <div key={cert.title} className="certification-card">
+            <div className="certificate-image-wrapper">
+              <img
+                src={cert.imagesrc}
+                alt={`${cert.title} certificate`}
+                className="certificate-image"
+              />
+            </div>
+            <div className="certification-text">
+              <h3 className="certification-title">{cert.title}</h3>
+              <p className="certification-meta">
+                {cert.issuer} | {cert.date}
+              </p>
+              <p className="certification-description">{cert.description}</p>
+            </div>
           </div>
         ))}
       </div>

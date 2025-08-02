@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       style={{
-        height: "70vh",
+        height: "69vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -52,7 +52,7 @@ export default function Hero() {
           e.currentTarget.style.color = "#000000";
         }}
       >
-        Visit Portfolio
+        Visit My Portfolio
         <span style={{ fontSize: "1.25rem" }}>↓</span>
       </button>
     </section>

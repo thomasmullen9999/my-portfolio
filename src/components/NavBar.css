@@ -1,15 +1,16 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #1f1f1f, #2c2c2c, #3a3a3a);
+  outline: none; /* remove debugging outline */
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1f1f1f, #2c2c2c, #3a3a3a) !important;
 }
 
 .navbar.scrolled {
-  background-color: rgba(10, 10, 10, 0.95); /* dark on scroll */
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
 

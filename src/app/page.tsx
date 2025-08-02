@@ -9,29 +9,32 @@ import Contact from "@/components/Contact";
 
 export default function HomePage() {
   return (
-    <main>
+    <main style={{ padding: 0 }}>
       <section id="hero">
         <Hero />
       </section>
+
       <div className="sticky-wrapper">
         <Navbar />
       </div>
-      <section id="about">
+
+      {/* Add padding to these sections */}
+      <section id="about" style={{ padding: "2rem" }}>
         <About />
       </section>
-      <section id="skills">
+      <section id="skills" style={{ padding: "2rem" }}>
         <Skills />
       </section>
-      <section id="certifications">
-        <Certifications />
-      </section>
-      <section id="experience">
-        <Experience />
-      </section>
-      <section id="projects">
+      <section id="projects" style={{ padding: "2rem" }}>
         <Projects />
       </section>
-      <section id="contact">
+      <section id="certifications" style={{ padding: "2rem" }}>
+        <Certifications />
+      </section>
+      <section id="experience" style={{ padding: "2rem" }}>
+        <Experience />
+      </section>
+      <section id="contact" style={{ padding: "2rem" }}>
         <Contact />
       </section>
     </main>
