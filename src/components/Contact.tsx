@@ -43,7 +43,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <p className="contact-copy">&copy; 2025. All rights reserved.</p>
+        <p className="contact-copy">&copy; 2025 All rights reserved.</p>
       </div>
     </footer>
   );

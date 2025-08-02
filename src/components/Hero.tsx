@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       style={{
-        height: "69vh",
+        height: "95vh", // Full viewport height
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -22,7 +22,7 @@ export default function Hero() {
     >
       {/* Circular Image */}
       <img
-        src="/images/na.png" // Replace with your actual image path
+        src="/images/me.jpg" // Replace with your actual image path
         alt="Thomas"
         style={{
           width: "20%",

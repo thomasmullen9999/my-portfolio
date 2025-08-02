@@ -7,7 +7,7 @@ export const skills = [
   { name: "SQL", image: "/images/sql.png" },
   { name: "React.js", image: "/images/react.png" },
   { name: "Next.js", image: "/images/next.png" },
-  { name: "React Native", image: "/images/reactnative.png" },
+  { name: "React Native", image: "/images/react.png" },
   { name: "Node.js", image: "/images/node.png" },
   { name: "Express.js", image: "/images/express.png" },
   { name: "Flask", image: "/images/flask.png" },

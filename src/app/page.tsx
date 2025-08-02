@@ -34,7 +34,7 @@ export default function HomePage() {
       <section id="experience" style={{ padding: "2rem" }}>
         <Experience />
       </section>
-      <section id="contact" style={{ padding: "2rem" }}>
+      <section id="contact" style={{ padding: "0rem" }}>
         <Contact />
       </section>
     </main>
