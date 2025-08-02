@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <footer className="contact-footer">
       <div className="contact-container">
-        <h2 className="contact-heading">Get in Touch</h2>
+        <h3 className="contact-heading">Get in Touch</h3>
 
         <div className="contact-links">
           <a
@@ -43,9 +43,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <p className="contact-copy">
-          &copy; 2025 Your Name. All rights reserved.
-        </p>
+        <p className="contact-copy">&copy; 2025. All rights reserved.</p>
       </div>
     </footer>
   );

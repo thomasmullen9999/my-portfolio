@@ -20,7 +20,25 @@ export default function Hero() {
         padding: "2rem",
       }}
     >
-      <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Thomas Mullen</h1>
+      {/* Circular Image */}
+      <img
+        src="/images/na.png" // Replace with your actual image path
+        alt="Thomas"
+        style={{
+          width: "20%",
+          aspectRatio: "1",
+          objectFit: "cover",
+          borderRadius: "50%",
+          marginBottom: "1rem",
+        }}
+      />
+
+      <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
+        Thomas Mullen
+      </h1>
+      <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+        Software Developer
+      </h2>
       <p
         style={{ fontSize: "1.5rem", maxWidth: "600px", marginBottom: "2rem" }}
       >

@@ -125,7 +125,7 @@ export default function Experience() {
                 therefore the use of a string which was just 5 characters in
                 length with this new system would allow for a total of 62
                 <sup>5</sup> (almost 1 billion) unique leads. This improvement
-                is demonstrated in the image.
+                is demonstrated in the image below.
               </p>
             </div>
 

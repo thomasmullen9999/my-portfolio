@@ -8,7 +8,7 @@ import Image from "next/image";
 const Skills = () => {
   return (
     <section className="skills-section">
-      <h2>Skills</h2>
+      <h2 className="skills-heading">Skills</h2>
       <div className="skills-grid">
         {skills.map((skill) => (
           <div className="skill-card" key={skill.name}>

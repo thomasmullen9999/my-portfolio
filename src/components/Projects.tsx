@@ -49,7 +49,7 @@ export default function Projects() {
         </article>
 
         <article className="project-card">
-          <h3 className="project-title">Portfolio Website</h3>
+          <h3 className="project-title">Portfolio Site</h3>
           <p className="project-description">
             Personal portfolio built with Next.js, Tailwind, and deployed via
             Vercel.
