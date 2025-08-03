@@ -2,16 +2,13 @@
 
 export default function Hero() {
   const handleScroll = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
     <section
       style={{
-        height: "95vh", // Full viewport height
+        height: "95vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -20,9 +17,8 @@ export default function Hero() {
         padding: "2rem",
       }}
     >
-      {/* Circular Image */}
       <img
-        src="/images/me.jpg" // Replace with your actual image path
+        src="/images/me.jpg"
         alt="Thomas"
         style={{
           width: "20%",

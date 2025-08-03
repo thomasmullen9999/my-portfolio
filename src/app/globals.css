@@ -778,7 +778,7 @@ h4 {
 }
 
 .projects-section {
-  max-width: 800px;
+  max-width: 100%;
   margin: 4rem auto;
   padding: 0 1.5rem;
   color: #ddd;
@@ -795,9 +795,16 @@ h4 {
 }
 
 .projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: single column */
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-list {
+    grid-template-columns: 1fr 1fr; /* Two columns on wider screens */
+    gap: 2rem;
+  }
 }
 
 .project-card {
@@ -1147,3 +1154,96 @@ h4 {
     font-size: 0.8rem;
   }
 }
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Default vertical nav */
+.navbar {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  /* other styles */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    width: 100% !important;
+  }
+
+  .navbar a {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+}
+
+/* Base styles */
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-content ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* center navbar on mobile */
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-content ul {
+    flex-direction: row !important; /* make nav items horizontal */
+    gap: 1rem;
+    overflow-x: auto; /* enable horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar-content ul li {
+    white-space: nowrap; /* prevent wrapping */
+  }
+}
+
+/* Prevent navbar container from causing horizontal overflow */
+.navbar {
+  box-sizing: border-box; /* include padding in width */
+  overflow-x: hidden; /* hide horizontal overflow outside navbar */
+}
+
+/* Allow nav items container to scroll horizontally if needed */
+.navbar-content ul {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem; /* optional, for scrollbar spacing */
+  margin: 0;
+}
+
+/* Optional: hide horizontal scrollbar visually (if you want a cleaner look) */
+/* 
+.navbar-content ul::-webkit-scrollbar {
+  display: none;
+}
+*/

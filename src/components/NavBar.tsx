@@ -45,26 +45,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      style={{
-        width: "100%",
-        padding: "1rem 2rem",
-        backgroundColor: "#1a1a1a",
-        color: "white",
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-      }}
-      className={`navbar ${scrolled ? "scrolled" : ""}`}
-    >
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-content">
-        <ul style={{ display: "flex", gap: "1.5rem", listStyle: "none" }}>
+        <ul>
           {navItems.map(({ id, label }) => (
             <li key={id}>
               <a
                 href={`#${id}`}
                 style={{
-                  color: activeSection === id ? "#3b82f6" : "white", // highlight blue
+                  color: activeSection === id ? "#3b82f6" : "white",
                   fontWeight: activeSection === id ? "bold" : "normal",
                   transition: "color 0.2s ease",
                 }}
