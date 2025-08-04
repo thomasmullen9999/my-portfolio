@@ -18,7 +18,11 @@ export default function Projects() {
             <a href="#" target="_blank" className="project-link">
               View Project
             </a>
-            <a href="#" target="_blank" className="project-link">
+            <a
+              href="https://github.com/thomasmullen9999/my-portfolio"
+              target="_blank"
+              className="project-link"
+            >
               GitHub Repo
             </a>
           </div>
@@ -36,11 +40,26 @@ export default function Projects() {
             React.js and Javascript.
           </p>
           <div className="project-links">
-            <a href="#" target="_blank" className="project-link">
+            <a
+              href="https://thomas-mullen-nc-news.netlify.app/"
+              target="_blank"
+              className="project-link"
+            >
               View Project
             </a>
-            <a href="#" target="_blank" className="project-link">
-              GitHub Repo
+            <a
+              href="https://github.com/thomasmullen9999/fe-nc-news"
+              target="_blank"
+              className="project-link"
+            >
+              GitHub Repo (Front End)
+            </a>
+            <a
+              href="https://nc-news-evv6.onrender.com/api"
+              target="_blank"
+              className="project-link"
+            >
+              GitHub Repo (Back End)
             </a>
           </div>
         </article>
@@ -65,31 +84,10 @@ export default function Projects() {
               View Project
             </a>
             <a
-              href="https://github.com/thomasmullen9999/strengthsync" // Example link
+              href="https://github.com/thomasmullen9999/fit-and-strong" // Example link
               target="_blank"
               className="project-link"
             >
-              GitHub Repo
-            </a>
-          </div>
-        </article>
-
-        <article className="project-card">
-          <img
-            src="/images/na.png"
-            alt="Screenshot of Mangata and Gallo website"
-            className="project-image"
-          />
-          <h3 className="project-title">Mangata and Gallo</h3>
-          <p className="project-description">
-            Website which sells gold and silver jewellery, built in Next.js with
-            Typescript.
-          </p>
-          <div className="project-links">
-            <a href="#" target="_blank" className="project-link">
-              View Project
-            </a>
-            <a href="#" target="_blank" className="project-link">
               GitHub Repo
             </a>
           </div>
@@ -120,6 +118,23 @@ export default function Projects() {
               target="_blank"
               className="project-link"
             >
+              GitHub Repo
+            </a>
+          </div>
+        </article>
+        <article className="project-card">
+          <img
+            src="/images/na.png"
+            alt="Screenshot of Mangata and Gallo website"
+            className="project-image"
+          />
+          <h3 className="project-title">C# Project</h3>
+          <p className="project-description">In Progress</p>
+          <div className="project-links">
+            <a href="#" target="_blank" className="project-link">
+              View Project
+            </a>
+            <a href="#" target="_blank" className="project-link">
               GitHub Repo
             </a>
           </div>
