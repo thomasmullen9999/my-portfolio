@@ -55,7 +55,7 @@ export default function Projects() {
               GitHub Repo (Front End)
             </a>
             <a
-              href="https://nc-news-evv6.onrender.com/api"
+              href="https://github.com/thomasmullen9999/nc-news"
               target="_blank"
               className="project-link"
             >
