@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "./Navbar.css";
 
 const navItems = [
   { id: "hero", label: "Home" },

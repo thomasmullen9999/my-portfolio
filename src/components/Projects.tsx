@@ -1,5 +1,3 @@
-import "./Projects.css";
-
 export default function Projects() {
   return (
     <section className="projects-section">
@@ -28,13 +26,14 @@ export default function Projects() {
 
         <article className="project-card">
           <img
-            src="/images/na.png"
+            src="/images/newslett.png"
             alt="Screenshot of Newslett app"
             className="project-image"
           />
           <h3 className="project-title">Newslett</h3>
           <p className="project-description">
-            News site like Reddit or Quora built with React.js and Javascript.
+            News application in the style of Reddit or Quora, built with
+            React.js and Javascript.
           </p>
           <div className="project-links">
             <a href="#" target="_blank" className="project-link">

@@ -1,5 +1,4 @@
 import { certifications } from "@/data/certifications";
-import "./Certifications.css";
 
 export default function Certifications() {
   return (

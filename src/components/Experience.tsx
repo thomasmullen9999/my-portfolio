@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import "./Experience.css";
 
 export default function Experience() {
   const [showMoreNorthcoders, setShowMoreNorthcoders] = useState(false);

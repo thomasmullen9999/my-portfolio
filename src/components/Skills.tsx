@@ -2,7 +2,6 @@
 
 import React from "react";
 import { skills } from "@/data/skills";
-import "./Skills.css";
 import Image from "next/image";
 
 const Skills = () => {
