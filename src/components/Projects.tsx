@@ -122,7 +122,7 @@ export default function Projects() {
             </a>
           </div>
         </article>
-        <article className="project-card">
+        {/*         <article className="project-card">
           <img
             src="/images/na.png"
             alt="Screenshot of Mangata and Gallo website"
@@ -138,7 +138,7 @@ export default function Projects() {
               GitHub Repo
             </a>
           </div>
-        </article>
+        </article> */}
       </div>
     </section>
   );
