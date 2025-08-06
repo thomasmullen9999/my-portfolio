@@ -10,11 +10,11 @@ export const certifications = [
   {
     title: "Meta Front-End Developer",
     issuer: "Coursera",
-    date: "In Progress",
+    date: "2025",
     description: `I decided to spend some time completing Meta's industry-recognised course covering all key concepts used in front-end web development. This was an extremely useful method of consolidating already existing knowledge I held through hands-on dev experience, whilst simultaneously branching into more advanced and specialised topics concerning React.
 
 This course was produced by the same company that created Facebook and Instagram, and is one of the most widely-used frameworks in modern software development worldwide. The course itself was composed of nine smaller courses, ranging from basic introductory concepts to more complex and higher-level ideas, and took several months to complete, with some courses reaching up to 30+ hours in length.`,
-    imagesrc: "/images/na.png",
+    imagesrc: "/images/metafrontend.png",
   },
   {
     title: "Software Engineering Bootcamp - Certificate of Completion",

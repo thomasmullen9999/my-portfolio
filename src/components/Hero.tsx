@@ -18,7 +18,7 @@ export default function Hero() {
       }}
     >
       <img
-        src="/images/me.jpg"
+        src="/images/react.png"
         alt="Thomas"
         style={{
           width: "20%",
