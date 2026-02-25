@@ -11,8 +11,8 @@ export default function Projects() {
           />
           <h3 className="project-title">Portfolio Site</h3>
           <p className="project-description">
-            Personal portfolio built with Next.js, Tailwind, and deployed via
-            Vercel.
+            Personal portfolio built with Next.js, Typescript, Tailwind, and
+            deployed via Vercel.
           </p>
           <div className="project-links">
             <a href="#" target="_blank" className="project-link">
@@ -27,6 +27,30 @@ export default function Projects() {
             </a>
           </div>
         </article>
+
+        {/*       <article className="project-card">
+          <img
+            src="/images/.png"
+            alt="Screenshot of app"
+            className="project-image"
+          />
+          <h3 className="project-title">FinanceFinder</h3>
+          <p className="project-description">
+            Financial tracking application, created with C# and .NET. Deployed
+            using Docker and...
+          </p>
+          <div className="project-links">
+            <a href="" target="_blank" className="project-link">
+              View Project
+            </a>
+            <a href="" target="_blank" className="project-link">
+              GitHub Repo (Front End)
+            </a>
+            <a href="" target="_blank" className="project-link">
+              GitHub Repo (Back End)
+            </a>
+          </div>
+        </article> */}
 
         <article className="project-card">
           <img
@@ -60,6 +84,35 @@ export default function Projects() {
               className="project-link"
             >
               GitHub Repo (Back End)
+            </a>
+          </div>
+        </article>
+
+        <article className="project-card">
+          <img
+            src="/images/ootguide.png"
+            alt="Screenshot of Ocarina of Time app"
+            className="project-image"
+          />
+          <h3 className="project-title">Ocarina of Time Guide</h3>
+          <p className="project-description">
+            A walkthrough to the classic Zelda game for the Nintendo 64, built
+            with Vue.js and Typescript.
+          </p>
+          <div className="project-links">
+            <a
+              href="https://oot-guide.vercel.app/"
+              target="_blank"
+              className="project-link"
+            >
+              View Project
+            </a>
+            <a
+              href="https://github.com/thomasmullen9999/oot-guide"
+              target="_blank"
+              className="project-link"
+            >
+              GitHub Repo
             </a>
           </div>
         </article>

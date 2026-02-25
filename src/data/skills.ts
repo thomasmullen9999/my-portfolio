@@ -10,6 +10,7 @@ export const skills = [
   { name: "React Native", image: "/images/react.png" },
   { name: "Node.js", image: "/images/node.png" },
   { name: "Express.js", image: "/images/express.png" },
+  { name: "Vue.js", image: "/images/vue.png" },
   { name: "Flask", image: "/images/flask.png" },
   { name: "Prisma", image: "/images/prisma.png" },
   { name: "PostgreSQL", image: "/images/postgres.png" },
@@ -29,4 +30,7 @@ export const skills = [
   { name: "SDLC", image: "/images/tech.png" },
   { name: "Tailwind", image: "/images/tailwind.png" },
   { name: "MongoDB", image: "/images/mongodb.png" },
+  { name: "C#", image: "/images/csharp.png" },
+  { name: ".NET", image: "/images/dotnet.png" },
+  { name: "Docker", image: "/images/docker.png" },
 ];
