@@ -146,7 +146,7 @@ export default function Projects() {
           </div>
         </article>
 
-        <article className="project-card">
+        {/* <article className="project-card">
           <img
             src="/images/megamansite.png"
             alt="Screenshot of Mega Man Guide"
@@ -174,7 +174,7 @@ export default function Projects() {
               GitHub Repo
             </a>
           </div>
-        </article>
+        </article> */}
         {/*         <article className="project-card">
           <img
             src="/images/na.png"

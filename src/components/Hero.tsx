@@ -18,7 +18,7 @@ export default function Hero() {
       }}
     >
       <img
-        src="/images/react.png"
+        src="/images/me.jpg"
         alt="Thomas"
         style={{
           width: "20%",
@@ -33,12 +33,12 @@ export default function Hero() {
         Thomas Mullen
       </h1>
       <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
-        Software Developer
+        Software Engineer
       </h2>
       <p
         style={{ fontSize: "1.5rem", maxWidth: "600px", marginBottom: "2rem" }}
       >
-        Full stack developer who loves building clean, user-friendly interfaces.
+        Full stack developer with a passion for building clean, user-friendly applications.
       </p>
 
       <button

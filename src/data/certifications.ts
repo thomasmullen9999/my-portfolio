@@ -1,10 +1,10 @@
 export const certifications = [
   {
-    title: "MSc Digital Technology Solutions (Level 7)",
-    issuer: "Northumbria University",
+    title: "AWS Certified Solutions Architect Associate",
+    issuer: "AWS",
     date: "In Progress",
     description:
-      "I am currently undertaking a Level 7 MSc Degree Apprenticeship, a rigorous and industry-integrated program that combines advanced academic study with real-world, hands-on experience. This apprenticeship allows me to apply cutting-edge theories and research directly to my role within a professional environment, bridging the gap between higher education and workplace innovation.",
+      "I am currently working on this qualification.",
     imagesrc: "/images/na.png",
   },
   {

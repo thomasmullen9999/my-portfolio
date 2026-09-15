@@ -23,6 +23,7 @@ const categories = [
     skillNames: [
       "React.js",
       "Next.js",
+      "Vue.js",
       "React Native",
       "Angular",
       "Node.js",
@@ -46,7 +47,6 @@ const categories = [
       "Jest",
       "Supertest",
       "Cypress",
-      "TDD",
       "Test Driven Development (TDD)",
     ],
   },
@@ -59,8 +59,16 @@ const categories = [
       "Netlify",
       "Cloudflare",
       "Docker",
+      "Bitbucket", 
+      "Jira"
     ],
   },
+  { 
+    title: "Soft Skills/Methodologies",
+    skillNames: [
+      "Paired Programming", "Technical Communication", "SDLC", "Agile/SCRUM"
+    ]
+  }
 ];
 
 const Skills = () => {
