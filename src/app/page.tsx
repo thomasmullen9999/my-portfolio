@@ -14,26 +14,30 @@ export default function HomePage() {
         <Hero />
       </section>
 
-      <div className="sticky-wrapper">
-        <Navbar />
-      </div>
+      <div className="navbar-sticky">
+  <Navbar />
+</div>
 
-      {/* Add padding to these sections */}
       <section id="about" style={{ padding: "2rem" }}>
         <About />
       </section>
+
       <section id="skills" style={{ padding: "2rem" }}>
         <Skills />
       </section>
+
       <section id="projects" style={{ padding: "2rem" }}>
         <Projects />
       </section>
+
       <section id="certifications" style={{ padding: "2rem" }}>
         <Certifications />
       </section>
+
       <section id="experience" style={{ padding: "2rem" }}>
         <Experience />
       </section>
+
       <section id="contact" style={{ padding: "0rem" }}>
         <Contact />
       </section>

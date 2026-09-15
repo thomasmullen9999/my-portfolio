@@ -1,15 +1,10 @@
-/* =========================================================
-   Tailwind
-========================================================= */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-/* =========================================================
-   Reset & Base Styles
-========================================================= */
+/* =========================
+   RESET / BASE
+========================= */
 
 * {
   margin: 0;
@@ -44,21 +39,18 @@ main {
 section {
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
   margin-bottom: 3rem;
   padding: 2rem;
   scroll-margin-top: 80px;
 }
 
-section#hero,
-section.sticky-wrapper {
+section#hero {
   padding: 0;
 }
 
-
-/* =========================================================
-   Scrollbar
-========================================================= */
+/* =========================
+   SCROLLBAR
+========================= */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -77,38 +69,49 @@ section.sticky-wrapper {
   background: #666;
 }
 
+/* =========================
+   NAVBAR
+========================= */
 
-/* =========================================================
-   Navbar
-========================================================= */
-
-.sticky-wrapper {
+.navbar-sticky {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
-  background-color: transparent !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+
+  width: 100%;
   display: flex;
   justify-content: center;
+
   padding: 1rem 2rem;
+
   background: linear-gradient(
     90deg,
     #1f1f1f,
     #2c2c2c,
     #3a3a3a
-  ) !important;
+  );
+
   outline: none;
   transition: box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar ul {
@@ -126,83 +129,51 @@ section.sticky-wrapper {
   transition: color 0.2s ease;
 }
 
-.navbar a:hover {
-  color: #1e90ff;
+.navbar a:hover,
+.navbar a.active {
+  color: #3b82f6;
 }
 
+.navbar a.active {
+  font-weight: 700;
+}
 
-/* =========================================================
-   About Section
-========================================================= */
+/* =========================
+   ABOUT
+========================= */
 
 .about-container {
   width: 100%;
   max-width: 1200px;
-
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 0 24px;
-
   color: #d1d5db;
-
-  font-family:
-    "Segoe UI",
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-title {
   font-size: 2.75rem;
   font-weight: 800;
-
-  margin-bottom: 2rem;
-
+  margin-bottom: 1.5rem;
   color: #f0f0f0;
-
   text-align: center;
-
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-
-/* =========================================================
-   Main About Layout
-========================================================= */
-
 .about-layout {
   display: grid;
-
-  grid-template-columns: minmax(0, 1.35fr) minmax(350px, 0.65fr);
-
-  gap: 2rem;
-
-  align-items: stretch;
-}
-
-
-/* =========================================================
-   About Text
-========================================================= */
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-
+  grid-template-columns: minmax(0, 1.15fr) minmax(420px, 0.85fr);
+  grid-template-rows: auto auto;
   gap: 1.25rem;
+  align-items: stretch;
 }
 
 .about-card {
   background: #1f2937;
-
   border: 1px solid #2a3545;
-
   border-radius: 16px;
-
   padding: 1.5rem 1.75rem;
-
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-
   transition:
     box-shadow 0.3s ease,
     border-color 0.3s ease;
@@ -210,26 +181,30 @@ section.sticky-wrapper {
 
 .about-card:hover {
   border-color: #3f4f65;
-
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.professional-card {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hobbies-card {
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .section-subtitle {
   font-size: 1.4rem;
   font-weight: 700;
-
   margin-bottom: 1rem;
-
   color: #93c5fd;
 }
 
 .about-card p {
   line-height: 1.6;
-
   margin-bottom: 0.9rem;
-
   font-size: 0.95rem;
-
   color: #d4d4d8;
 }
 
@@ -237,46 +212,34 @@ section.sticky-wrapper {
   margin-bottom: 0;
 }
 
-
-/* =========================================================
-   About Images
-========================================================= */
-
 .about-images {
+  grid-column: 2;
+  grid-row: 1;
+
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 0.75rem;
 
+  height: 100%;
   min-height: 0;
 }
 
 .about-image-wrapper {
   position: relative;
-
   min-width: 0;
   min-height: 0;
-
   overflow: hidden;
-
   border-radius: 14px;
-
   background: #111;
-
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .image-card {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   border-radius: 14px;
-
   transition:
     transform 0.4s ease,
     filter 0.3s ease;
@@ -287,77 +250,9 @@ section.sticky-wrapper {
   filter: brightness(1.08);
 }
 
-
-/* =========================================================
-   Responsive — Medium
-========================================================= */
-
-@media (max-width: 900px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .about-images {
-    height: 400px;
-  }
-}
-
-
-/* =========================================================
-   Responsive — Mobile
-========================================================= */
-
-@media (max-width: 768px) {
-  .about-container {
-    max-width: 90%;
-
-    padding: 0 1rem;
-
-    margin: 60px auto;
-  }
-
-  .about-title {
-    font-size: 2.2rem;
-
-    margin-bottom: 1.5rem;
-  }
-
-  .about-card {
-    padding: 1.25rem;
-  }
-
-  .section-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .about-card p {
-    font-size: 0.9rem;
-  }
-
-  .about-images {
-    height: 300px;
-
-    gap: 0.5rem;
-  }
-}
-
-
-/* =========================================================
-   Responsive — Small Mobile
-========================================================= */
-
-@media (max-width: 480px) {
-  .about-images {
-    height: 240px;
-  }
-
-  .about-card {
-    padding: 1rem;
-  }
-}
-/* =========================================================
-   Certifications Section
-========================================================= */
+/* =========================
+   CERTIFICATIONS
+========================= */
 
 .certifications-section {
   padding: 3rem 2rem;
@@ -380,29 +275,17 @@ section.sticky-wrapper {
   margin: 0 auto;
 }
 
-
-/* -------------------------
-   Certificate Grid
-------------------------- */
-
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1rem;
-  justify-items: stretch;
   margin-bottom: 1.5rem;
 }
-
-
-/* -------------------------
-   Certificate Card
-------------------------- */
 
 .certification-card {
   position: relative;
   width: 100%;
   min-width: 0;
-
   padding: 0.75rem;
 
   border: 1px solid #2a2a2a;
@@ -438,11 +321,6 @@ section.sticky-wrapper {
   box-shadow: 0 0 0 1px #93c5fd;
 }
 
-
-/* -------------------------
-   Certificate Image
-------------------------- */
-
 .certificate-image-wrapper {
   width: 100%;
   height: 130px;
@@ -452,10 +330,12 @@ section.sticky-wrapper {
   justify-content: center;
 
   margin-bottom: 0.75rem;
-  padding: 0.4rem;
+  padding: 0;
 
-  background: #111;
-  border-radius: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
   overflow: hidden;
 }
 
@@ -463,8 +343,7 @@ section.sticky-wrapper {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 6px;
-
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
@@ -472,48 +351,28 @@ section.sticky-wrapper {
   transform: scale(1.04);
 }
 
-
-/* -------------------------
-   Certificate Card Text
-------------------------- */
-
 .certification-card-title {
   width: 100%;
   margin: 0 0 0.35rem;
-
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.3;
-
   color: #f5f5f5;
 }
 
 .certification-card-meta {
   margin: 0;
-
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   line-height: 1.3;
-
   color: #9ca3af;
 }
 
-.certification-number {
-  position: absolute;
-  top: 0.65rem;
-  right: 0.7rem;
-
-  font-size: 0.65rem;
-  font-weight: 700;
-
-  color: #6b7280;
-}
-
-
-/* -------------------------
-   Selected Certification
-------------------------- */
-
 .certification-details {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: center;
+
   padding: 1.5rem 2rem;
 
   background: #1a1a1a;
@@ -523,41 +382,61 @@ section.sticky-wrapper {
   animation: certificationFadeIn 0.2s ease;
 }
 
+.certification-detail-image-wrapper {
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.certification-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.certification-detail-content {
+  min-width: 0;
+}
+
 .certification-details-label {
   margin: 0 0 0.35rem;
-
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-
   color: #6b7280;
 }
 
 .certification-details-title {
   margin: 0 0 0.35rem;
-
   font-size: 1.4rem;
   font-weight: 700;
-
   color: #f5f5f5;
 }
 
 .certification-details-meta {
   margin: 0;
-
   font-size: 0.9rem;
   color: #9ca3af;
 }
 
 .certification-details-description {
   margin: 1rem 0 0;
-
-  max-width: 900px;
-
+  max-width: 700px;
   font-size: 0.95rem;
   line-height: 1.6;
-
   color: #d4d4d8;
 }
 
@@ -573,126 +452,74 @@ section.sticky-wrapper {
   }
 }
 
-
-/* =========================================================
-   Experience Section
-========================================================= */
+/* =========================
+   EXPERIENCE
+========================= */
 
 .experience-section {
   width: 100%;
   max-width: 1200px;
   margin: 80px auto;
   padding: 0 24px;
-
-  font-family:
-    "Segoe UI",
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #e5e7eb;
 }
 
-.experience-section .heading {
+.experience-heading {
   font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 2rem;
-
   color: #f0f0f0;
   text-align: center;
-
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-
-/* -------------------------
-   Main Experience Container
-------------------------- */
-
 .experience-container {
   display: grid;
-  grid-template-columns: 270px 1fr;
-
-  /*
-    Keeps the whole experience section
-    within roughly one screen on desktop.
-  */
+  grid-template-columns: 270px minmax(0, 1fr);
   height: min(650px, calc(100vh - 220px));
-
   min-height: 500px;
-
   background: #151515;
-
   border: 1px solid #292929;
   border-radius: 16px;
-
   overflow: hidden;
-
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
-
-/* -------------------------
-   Left Tabs
-------------------------- */
+/* =========================
+   EXPERIENCE TABS
+========================= */
 
 .experience-tabs {
   position: relative;
-
   display: flex;
   flex-direction: column;
-
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-
   background: #111;
-
   padding: 0.75rem 0;
 }
 
-
-/*
-  Subtle timeline line
-*/
 .experience-tabs::before {
   content: "";
-
   position: absolute;
-
   top: 2rem;
   bottom: 2rem;
   left: 22px;
-
   width: 1px;
-
   background: #333;
-
   pointer-events: none;
 }
 
-
-/* -------------------------
-   Experience Tab
-------------------------- */
-
 .experience-tab {
   position: relative;
-
   width: 100%;
-
   padding: 1.15rem 1rem 1.15rem 2.75rem;
-
   border: none;
   border-left: 3px solid transparent;
-
   background: transparent;
-
   color: #fff;
-
   text-align: left;
-
   cursor: pointer;
-
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
@@ -707,30 +534,18 @@ section.sticky-wrapper {
   background: rgba(255, 255, 255, 0.07);
 }
 
-
-/* Timeline dot */
-
 .experience-tab::before {
   content: "";
-
   position: absolute;
-
   left: 17px;
   top: 50%;
-
   width: 10px;
   height: 10px;
-
   border-radius: 50%;
-
   background: #333;
-
   border: 2px solid #111;
-
   transform: translateY(-50%);
-
   z-index: 2;
-
   transition: background-color 0.2s ease;
 }
 
@@ -738,80 +553,52 @@ section.sticky-wrapper {
   background: #93c5fd;
 }
 
-
-/* -------------------------
-   Tab Content
-------------------------- */
-
 .tab-company {
   display: block;
-
   margin-bottom: 0.25rem;
-
   font-size: 1rem;
   font-weight: 700;
-
   color: #f5f5f5;
 }
 
 .tab-role {
   display: block;
-
   margin-bottom: 0.3rem;
-
   font-size: 0.8rem;
-
   color: #a1a1aa;
 }
 
 .tab-date {
   display: block;
-
   font-size: 0.75rem;
-
   color: #6b7280;
 }
 
-
-/* -------------------------
-   Right Experience Content
-------------------------- */
+/* =========================
+   EXPERIENCE CONTENT
+========================= */
 
 .experience-content {
   min-width: 0;
-
   padding: 2rem 2.5rem;
-
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-
-/* -------------------------
-   Experience Header
-------------------------- */
-
 .experience-header {
   display: flex;
-
   justify-content: space-between;
   align-items: flex-start;
-
   gap: 2rem;
-
   margin-bottom: 1.5rem;
-
   padding-bottom: 1.25rem;
-
   border-bottom: 1px solid #292929;
 }
 
 .experience-header h3 {
   margin: 0 0 0.4rem;
-
   font-size: 1.5rem;
   line-height: 1.25;
-
   color: #fff;
 }
 
@@ -820,23 +607,11 @@ section.sticky-wrapper {
   font-weight: 400;
 }
 
-
-/* -------------------------
-   Experience Date
-------------------------- */
-
 .experience-date {
   margin: 0;
-
   font-size: 0.9rem;
-
   color: #9ca3af;
 }
-
-
-/* -------------------------
-   Experience Logo
-------------------------- */
 
 .experience-logo {
   flex-shrink: 0;
@@ -846,48 +621,164 @@ section.sticky-wrapper {
   border-radius: 6px;
 }
 
-
-/* -------------------------
-   Experience Description
-------------------------- */
+/* =========================
+   EXPERIENCE TEXT
+========================= */
 
 .experience-description {
-  line-height: 1.6;
-
   color: #d4d4d8;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .experience-description p {
-  margin-bottom: 1rem;
+  margin: 0 0 1.1rem;
 }
 
-.experience-description h4 {
-  margin: 1.5rem 0 0.5rem;
-
-  font-size: 1.1rem;
-
-  color: #93c5fd;
+.experience-description p:last-child {
+  margin-bottom: 0;
 }
 
-
-/* -------------------------
-   Experience Lists
-------------------------- */
+.experience-description ul {
+  margin: 0 0 1.25rem;
+}
 
 .experience-list {
-  padding-left: 1.25rem;
-
-  margin-top: 0.75rem;
+  padding-left: 1.4rem;
+  list-style-type: disc;
 }
 
 .experience-list li {
   margin-bottom: 0.7rem;
+  padding-left: 0.25rem;
 }
 
+.experience-list li:last-child {
+  margin-bottom: 0;
+}
 
-/* =========================================================
-   Projects Section
-========================================================= */
+.experience-description li::marker {
+  color: #93c5fd;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .experience-container {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .experience-content {
+    padding: 1.75rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    max-width: 90%;
+    padding: 0 1rem;
+    margin: 60px auto;
+  }
+
+  .experience-heading {
+    font-size: 2.2rem;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
+    border-radius: 12px;
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;
+  }
+
+  .experience-tabs::before {
+    display: none;
+  }
+
+  .experience-tab {
+    flex: 1;
+    min-width: 170px;
+    padding: 1rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .experience-tab.active {
+    border-left: none;
+    border-bottom-color: #93c5fd;
+  }
+
+  .experience-tab::before {
+    display: none;
+  }
+
+  .experience-content {
+    padding: 1.5rem;
+    overflow-y: visible;
+  }
+
+  .experience-header {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-logo {
+    width: 80px;
+    height: 45px;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .experience-list {
+    padding-left: 1.25rem;
+  }
+
+  .experience-list li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-tab {
+    min-width: 145px;
+  }
+
+  .tab-company {
+    font-size: 0.9rem;
+  }
+
+  .tab-role {
+    font-size: 0.7rem;
+  }
+
+  .tab-date {
+    font-size: 0.65rem;
+  }
+
+  .experience-description {
+    font-size: 0.88rem;
+  }
+}
+/* =========================
+   PROJECTS
+========================= */
 
 .projects-section {
   width: 100%;
@@ -900,43 +791,26 @@ section.sticky-wrapper {
   font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 2.5rem;
-
   color: #f0f0f0;
-
   text-align: center;
-
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-
-/* -------------------------
-   Projects Grid
-------------------------- */
-
 .projects-list {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 2rem;
 }
-
-
-/* -------------------------
-   Project Card
-------------------------- */
 
 .project-card {
   display: flex;
   flex-direction: column;
 
   background: #1f2937;
-
   border: 1px solid #2a3545;
   border-radius: 16px;
 
   padding: 1.25rem;
-
   overflow: hidden;
 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -955,11 +829,6 @@ section.sticky-wrapper {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
 }
 
-
-/* -------------------------
-   Project Image
-------------------------- */
-
 .project-image {
   width: 100%;
   height: 240px;
@@ -975,11 +844,6 @@ section.sticky-wrapper {
   background: #111;
 }
 
-
-/* -------------------------
-   Project Content
-------------------------- */
-
 .project-title {
   font-size: 1.4rem;
   font-weight: 700;
@@ -991,7 +855,6 @@ section.sticky-wrapper {
 
 .project-description {
   font-size: 0.95rem;
-
   line-height: 1.6;
 
   color: #d4d4d8;
@@ -1001,16 +864,9 @@ section.sticky-wrapper {
   flex-grow: 1;
 }
 
-
-/* -------------------------
-   Project Links
-------------------------- */
-
 .project-links {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 0.75rem;
 }
 
@@ -1022,7 +878,6 @@ section.sticky-wrapper {
   background: #111827;
 
   border: 1px solid #374151;
-
   border-radius: 7px;
 
   color: #93c5fd;
@@ -1040,72 +895,19 @@ section.sticky-wrapper {
 
 .project-link:hover {
   background: #1f2937;
-
   border-color: #60a5fa;
-
   color: #bfdbfe;
 }
 
-
-/* =========================================================
-   Projects Responsive
-========================================================= */
-
-@media (max-width: 900px) {
-  .projects-list {
-    grid-template-columns: 1fr;
-  }
-
-  .project-image {
-    height: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-section {
-    max-width: 90%;
-    padding: 0 1rem;
-    margin: 60px auto;
-  }
-
-  .projects-heading {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .project-card {
-    padding: 1rem;
-  }
-
-  .project-image {
-    height: 220px;
-  }
-
-  .project-title {
-    font-size: 1.25rem;
-  }
-
-  .project-description {
-    font-size: 0.9rem;
-  }
-
-  .project-links {
-    gap: 0.5rem;
-  }
-
-  .project-link {
-    font-size: 0.75rem;
-  }
-}
-/* =========================================================
-   Skills Section
-========================================================= */
+/* =========================
+   SKILLS
+========================= */
 
 .skills-section {
-  padding: 4rem 2rem;
+  width: 100%;
+  padding: 3rem 2rem;
 
   background-color: #0f0f0f;
-
   color: white;
 }
 
@@ -1113,7 +915,7 @@ section.sticky-wrapper {
   font-size: 2.75rem;
   font-weight: 800;
 
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   color: #f0f0f0;
 
@@ -1123,62 +925,75 @@ section.sticky-wrapper {
 }
 
 .skills-categories {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1100px;
+
   margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
-  gap: 2.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
 }
 
 .skills-category {
   display: flex;
   flex-direction: column;
 
-  gap: 1rem;
+  gap: 0.6rem;
+
+  padding: 1rem;
+
+  background: #151515;
+
+  border: 1px solid #292929;
+  border-radius: 12px;
 }
 
 .category-label {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
 
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
 
-  color: #6b7280;
+  color: #93c5fd;
 
   margin: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.45rem;
 
-  border-bottom: 1px solid #1f1f1f;
+  border-bottom: 1px solid #292929;
 }
 
 .skills-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
 
-  grid-template-columns:
-    repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.6rem;
 
-  gap: 0.875rem;
+  align-items: flex-start;
 }
 
 .skill-card {
+  width: 90px;
+  height: 90px;
+  flex: 0 0 90px;
+
   display: flex;
   flex-direction: column;
 
   align-items: center;
   justify-content: center;
 
-  gap: 0.5rem;
+  gap: 0.35rem;
 
-  padding: 1rem 0.75rem;
+  padding: 0.5rem;
 
   background: #e8eaf0;
 
   border: 1px solid #d0d3de;
-
-  border-radius: 12px;
+  border-radius: 10px;
 
   text-align: center;
 
@@ -1203,23 +1018,32 @@ section.sticky-wrapper {
   height: 36px;
 
   object-fit: contain;
+
+  flex-shrink: 0;
 }
 
 .skill-name {
   margin: 0;
 
-  font-size: 0.72rem;
+  width: 100%;
+
+  font-size: 0.68rem;
   font-weight: 600;
+
+  line-height: 1.15;
 
   color: #1f2937;
 
-  line-height: 1.3;
+  overflow-wrap: break-word;
 }
 
+.skills-category:last-child {
+  grid-column: 1 / -1;
+}
 
-/* =========================================================
-   Contact / Footer
-========================================================= */
+/* =========================
+   CONTACT / FOOTER
+========================= */
 
 .contact-footer {
   background: linear-gradient(
@@ -1309,7 +1133,6 @@ section.sticky-wrapper {
 
 .contact-icon {
   font-size: 1.5rem;
-
   line-height: 1;
 
   color: #999;
@@ -1325,10 +1148,9 @@ section.sticky-wrapper {
   margin: 0;
 }
 
-
-/* =========================================================
-   Miscellaneous
-========================================================= */
+/* =========================
+   LEGACY SKILLS CLASSES
+========================= */
 
 .skills-list {
   display: flex;
@@ -1345,10 +1167,9 @@ section.sticky-wrapper {
   border-radius: 6px;
 }
 
-
-/* =========================================================
-   Responsive — Medium Screens
-========================================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1000px) {
   .certifications-grid {
@@ -1362,33 +1183,104 @@ section.sticky-wrapper {
   .experience-content {
     padding: 1.75rem 2rem;
   }
+
+  .about-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(350px, 0.8fr);
+  }
 }
 
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
 
-/* =========================================================
-   Responsive — Mobile
-========================================================= */
+  .professional-card {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-images {
+    grid-column: 1;
+    grid-row: 2;
+
+    height: 400px;
+  }
+
+  .hobbies-card {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 280px;
+  }
+
+  .skills-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-category:last-child {
+    grid-column: auto;
+  }
+}
 
 @media (max-width: 768px) {
-
-  /* General */
-
   section {
     padding: 1.5rem;
   }
 
   /* Navbar */
 
+  .navbar {
+    padding: 0.85rem 1rem;
+  }
+
   .navbar ul {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
+
+    align-items: center;
   }
 
   /* About */
 
   .about-container {
     max-width: 90%;
+
     padding: 0 1rem;
+
+    margin: 60px auto;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-card p {
+    font-size: 0.9rem;
+  }
+
+  .about-images {
+    height: 300px;
+
+    gap: 0.5rem;
   }
 
   /* Certifications */
@@ -1426,7 +1318,15 @@ section.sticky-wrapper {
   }
 
   .certification-details {
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+
     padding: 1.25rem;
+  }
+
+  .certification-detail-image-wrapper {
+    height: 350px;
   }
 
   .certification-details-title {
@@ -1437,6 +1337,7 @@ section.sticky-wrapper {
 
   .experience-section {
     max-width: 90%;
+
     padding: 0 1rem;
 
     margin: 60px auto;
@@ -1466,9 +1367,6 @@ section.sticky-wrapper {
     padding: 0;
   }
 
-  /*
-    Remove the vertical timeline on mobile.
-  */
   .experience-tabs::before {
     display: none;
   }
@@ -1486,6 +1384,7 @@ section.sticky-wrapper {
 
   .experience-tab.active {
     border-left: none;
+
     border-bottom-color: #93c5fd;
   }
 
@@ -1495,6 +1394,7 @@ section.sticky-wrapper {
 
   .experience-content {
     padding: 1.5rem;
+
     overflow-y: visible;
   }
 
@@ -1508,34 +1408,91 @@ section.sticky-wrapper {
     font-size: 1.2rem;
   }
 
-@media (max-width: 768px) {
   .experience-logo {
     width: 80px;
     height: 45px;
   }
-}
 
   /* Projects */
 
   .projects-section {
     max-width: 90%;
+
     padding: 0 1rem;
+
+    margin: 60px auto;
   }
 
-  /* Certifications / general cards */
+  .projects-heading {
+    font-size: 2.2rem;
 
-  .certification-card {
-    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-links {
+    gap: 0.5rem;
+  }
+
+  .project-link {
+    font-size: 0.75rem;
   }
 
   /* Skills */
 
   .skills-section {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1rem;
   }
 
   .skills-heading {
     font-size: 2.2rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-categories {
+    gap: 0.8rem;
+  }
+
+  .skills-category {
+    padding: 0.85rem;
+  }
+
+  .skills-grid {
+    gap: 0.5rem;
+  }
+
+  .skill-card {
+    width: 78px;
+    height: 78px;
+
+    flex-basis: 78px;
+
+    padding: 0.4rem;
+  }
+
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-name {
+    font-size: 0.62rem;
   }
 
   /* Contact */
@@ -1545,12 +1502,19 @@ section.sticky-wrapper {
   }
 }
 
-
-/* =========================================================
-   Responsive — Small Mobile
-========================================================= */
-
 @media (max-width: 480px) {
+  /* About */
+
+  .about-images {
+    height: 240px;
+  }
+
+  .about-card {
+    padding: 1rem;
+  }
+
+  /* Certifications */
+
   .certifications-grid {
     grid-template-columns: 1fr 1fr;
 
@@ -1569,6 +1533,12 @@ section.sticky-wrapper {
     font-size: 0.6rem;
   }
 
+  .certification-detail-image-wrapper {
+    height: 280px;
+  }
+
+  /* Experience */
+
   .experience-tab {
     min-width: 145px;
   }
@@ -1583,5 +1553,23 @@ section.sticky-wrapper {
 
   .tab-date {
     font-size: 0.65rem;
+  }
+
+  /* Skills */
+
+  .skill-card {
+    width: 72px;
+    height: 72px;
+
+    flex-basis: 72px;
+  }
+
+  .skill-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .skill-name {
+    font-size: 0.58rem;
   }
 }

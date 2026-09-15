@@ -3,7 +3,7 @@ export default function Projects() {
     <section className="projects-section">
       <h2 className="projects-heading">Projects</h2>
       <div className="projects-list">
-        <article className="project-card">
+        {/* <article className="project-card">
           <img
             src="/images/portfolio.png"
             alt="Screenshot of Portfolio Site"
@@ -13,6 +13,30 @@ export default function Projects() {
           <p className="project-description">
             Personal portfolio built with Next.js, Typescript, Tailwind, and
             deployed via Vercel.
+          </p>
+          <div className="project-links">
+            <a href="#" target="_blank" className="project-link">
+              View Project
+            </a>
+            <a
+              href="https://github.com/thomasmullen9999/my-portfolio"
+              target="_blank"
+              className="project-link"
+            >
+              GitHub Repo
+            </a>
+          </div>
+        </article> */}
+
+        <article className="project-card">
+          <img
+            src="/images/na.png"
+            alt="Screenshot of LeadMemory"
+            className="project-image"
+          />
+          <h3 className="project-title">LeadMemory</h3>
+          <p className="project-description">
+            CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel.
           </p>
           <div className="project-links">
             <a href="#" target="_blank" className="project-link">

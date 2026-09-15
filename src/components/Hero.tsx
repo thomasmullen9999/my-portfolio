@@ -38,7 +38,7 @@ export default function Hero() {
       <p
         style={{ fontSize: "1.5rem", maxWidth: "600px", marginBottom: "2rem" }}
       >
-        Full stack developer with a passion for building clean, user-friendly applications.
+        Full stack developer focused on building clean and intuitive user experiences.
       </p>
 
       <button

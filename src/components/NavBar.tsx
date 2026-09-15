@@ -17,21 +17,21 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sectionIds = navItems.map((item) => item.id);
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      let current = sectionIds[0];
+      let current = "hero";
 
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            current = id;
-            break;
-          }
+      for (const { id } of navItems) {
+        const element = document.getElementById(id);
+
+        if (!element) continue;
+
+        const rect = element.getBoundingClientRect();
+
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          current = id;
+          break;
         }
       }
 
@@ -39,8 +39,11 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once to set initial state
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -51,11 +54,7 @@ const Navbar = () => {
             <li key={id}>
               <a
                 href={`#${id}`}
-                style={{
-                  color: activeSection === id ? "#3b82f6" : "white",
-                  fontWeight: activeSection === id ? "bold" : "normal",
-                  transition: "color 0.2s ease",
-                }}
+                className={activeSection === id ? "active" : ""}
               >
                 {label}
               </a>

@@ -12,7 +12,7 @@ const jobs = [
     content: (
       <>
         <p>
-          I joined Sagoss as a full stack Software Engineer, working within a
+          I joined Sagoss as a Full-Stack Software Engineer, working within a
           large team of developers to build and maintain web services. I enjoy
           collaborating with a diverse technical team and deepening my
           expertise in Vue.js, MySQL, and Jira/Bitbucket.
@@ -24,11 +24,9 @@ const jobs = [
           company created a new mid-level position to bring me on board.
         </p>
 
-        <p>
-          Some of my key achievements at Sagoss have included:
-        </p>
+        <p>Some of my key achievements at Sagoss have included:</p>
 
-        <ul className="list">
+        <ul className="experience-list">
           <li>
             Executed database schema migrations across the company's two core
             production applications, updating API and UI layers to reflect
@@ -37,31 +35,28 @@ const jobs = [
 
           <li>
             Delivered feature work across two major Vue.js enterprise
-            platforms, a medical clinic system and a parking technology
-            platform, each supporting numerous clients, by refactoring
-            components and improving processes in accordance with client
-            requirements.
+            platforms: a medical clinic system and a parking technology
+            platform. This involved refactoring components and improving
+            processes in accordance with client requirements.
           </li>
 
           <li>
             Managed development tasks through Jira and conducted peer code
-            reviews via Bitbucket pull requests as required, providing clear
-            and constructive feedback to improve code quality, maintain
-            consistency with company standards, and support task progression or
-            escalation where needed.
+            reviews via Bitbucket pull requests, providing clear and
+            constructive feedback to improve code quality and maintain
+            consistency with company standards.
           </li>
 
           <li>
             Restructured project directory architecture, refactoring API calls
-            and file import references accordingly to enhance codebase
-            readability and long-term maintainability.
+            and file import references to enhance codebase readability and
+            long-term maintainability.
           </li>
 
           <li>
             Migrated legacy Vue components from the Options API to the
             Composition API as part of related feature work, while building
-            new components directly in the Composition API, improving code
-            structure, readability, and long-term maintainability.
+            new components directly in the Composition API.
           </li>
         </ul>
       </>
@@ -84,17 +79,15 @@ const jobs = [
         </p>
 
         <p>
-          On a day-to-day basis I owned system architecture and led project
-          delivery, ensuring alignment across marketing and sales teams. I also
-          oversaw the CRM database, managing lead storage and campaign
+          On a day-to-day basis, I owned system architecture and led project
+          delivery, ensuring alignment across marketing and sales teams. I
+          also oversaw the CRM database, managing lead storage and campaign
           monitoring.
         </p>
 
-        <p>
-          Some of my key achievements in this role included:
-        </p>
+        <p>Some of my key achievements in this role included:</p>
 
-        <ul className="list">
+        <ul className="experience-list">
           <li>
             Spearheaded the development of an AI-powered dialler using Twilio
             and custom algorithms, significantly enhancing lead engagement
@@ -120,8 +113,8 @@ const jobs = [
           <li>
             Developed the entire frontend of an in-house CRM from scratch
             using Next.js, integrating RESTful APIs to connect with the
-            backend — designed to migrate thousands of existing leads and
-            replace a third-party solution.
+            backend. The system was designed to migrate thousands of existing
+            leads and replace a third-party solution.
           </li>
         </ul>
       </>
@@ -142,14 +135,16 @@ const jobs = [
           commercial projects.
         </p>
 
-        <ul className="list">
+        <p>Key responsibilities and achievements included:</p>
+
+        <ul className="experience-list">
           <li>
             Built and implemented customer-facing forms for equal pay and
             legal claims, collecting and handling sensitive user data.
           </li>
 
           <li>
-            Developed features for an internal admin site including graphs,
+            Developed features for an internal admin site, including graphs,
             charts, and API-driven lead data displays.
           </li>
 
@@ -160,7 +155,7 @@ const jobs = [
         </ul>
 
         <p>
-          During this role I became proficient in TypeScript and Next.js,
+          During this role, I became proficient in TypeScript and Next.js,
           delivering both customer-facing and internal software across the
           business.
         </p>
@@ -178,8 +173,8 @@ const jobs = [
       <>
         <p>
           During an intensive and insightful bootcamp, I built multiple
-          full-stack web applications using JavaScript, SQL and HTML/CSS, with
-          rigorous testing using Jest and Cypress.
+          full-stack web applications using JavaScript, SQL, and HTML/CSS,
+          with rigorous testing using Jest and Cypress.
         </p>
 
         <p>
@@ -187,10 +182,21 @@ const jobs = [
           designed to simulate real-world development team workflows.
         </p>
 
-        <p>
-          Consequently, I honed my skills in writing clean code, fixing bugs
-          and ensuring optimal performance through rigorous testing.
-        </p>
+        <p>Key areas of development included:</p>
+
+        <ul className="experience-list">
+          <li>Writing clean, maintainable code.</li>
+          <li>Debugging and fixing application issues.</li>
+          <li>Testing applications thoroughly with Jest and Cypress.</li>
+          <li>
+            Improving application performance and reliability through
+            iterative development.
+          </li>
+          <li>
+            Working collaboratively through Agile sprints and pair
+            programming.
+          </li>
+        </ul>
       </>
     ),
   },
@@ -199,58 +205,65 @@ const jobs = [
 export default function Experience() {
   const [activeJob, setActiveJob] = useState("sagoss");
 
-  const selectedJob = jobs.find((job) => job.id === activeJob);
+  const selectedJob =
+    jobs.find((job) => job.id === activeJob) ?? jobs[0];
 
   return (
-    <section className="section experience-section">
-      <h2 className="heading">Experience</h2>
+    <section className="experience-section">
+      <h2 className="experience-heading">Experience</h2>
 
       <div className="experience-container">
         {/* Left-hand timeline / tabs */}
-        <div className="experience-tabs">
-          {jobs.map((job) => (
-            <button
-              key={job.id}
-              className={`experience-tab ${
-                activeJob === job.id ? "active" : ""
-              }`}
-              onClick={() => setActiveJob(job.id)}
-              type="button"
-              aria-selected={activeJob === job.id}
-            >
-              <span className="timeline-dot"></span>
+        <div className="experience-tabs" role="tablist">
+          {jobs.map((job) => {
+            const isActive = activeJob === job.id;
 
-              <span className="tab-content">
+            return (
+              <button
+                key={job.id}
+                type="button"
+                className={`experience-tab ${
+                  isActive ? "active" : ""
+                }`}
+                onClick={() => setActiveJob(job.id)}
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`experience-${job.id}`}
+              >
                 <span className="tab-company">{job.company}</span>
 
                 <span className="tab-role">{job.role}</span>
 
                 <span className="tab-date">{job.date}</span>
-              </span>
-            </button>
-          ))}
+              </button>
+            );
+          })}
         </div>
 
         {/* Right-hand job content */}
-        <div className="experience-content">
+        <div
+          className="experience-content"
+          id={`experience-${selectedJob.id}`}
+          role="tabpanel"
+        >
           <div className="experience-header">
-            <div className="experience-heading-text">
+            <div>
               <h3>
                 {selectedJob.role}{" "}
                 <span>@ {selectedJob.company}</span>
               </h3>
 
-              <p className="date">{selectedJob.date}</p>
+              <p className="experience-date">{selectedJob.date}</p>
             </div>
 
             <img
               src={selectedJob.logo}
               alt={`${selectedJob.company} company logo`}
-              className="logo"
+              className="experience-logo"
             />
           </div>
 
-          <div className="description">
+          <div className="experience-description">
             {selectedJob.content}
           </div>
         </div>

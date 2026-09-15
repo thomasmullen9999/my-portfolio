@@ -13,7 +13,7 @@ export default function Certifications() {
       <div className="certifications-container">
         {/* Certificate grid */}
         <div className="certifications-grid" role="tablist">
-          {certifications.map((cert, index) => {
+          {certifications.map((cert) => {
             const isSelected = selectedCert.title === cert.title;
 
             return (
@@ -43,10 +43,6 @@ export default function Certifications() {
                 <p className="certification-card-meta">
                   {cert.issuer} · {cert.date}
                 </p>
-
-                <span className="certification-number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
               </button>
             );
           })}
@@ -58,25 +54,31 @@ export default function Certifications() {
           className="certification-details"
           role="tabpanel"
         >
-          <div className="certification-details-header">
-            <div>
-              <p className="certification-details-label">
-                Selected certification
-              </p>
-
-              <h3 className="certification-details-title">
-                {selectedCert.title}
-              </h3>
-
-              <p className="certification-details-meta">
-                {selectedCert.issuer} · {selectedCert.date}
-              </p>
-            </div>
+          <div className="certification-detail-image-wrapper">
+            <img
+              src={selectedCert.imagesrc}
+              alt={`${selectedCert.title} certificate`}
+              className="certification-detail-image"
+            />
           </div>
 
-          <p className="certification-details-description">
-            {selectedCert.description}
-          </p>
+          <div className="certification-detail-content">
+            <p className="certification-details-label">
+              Selected certification
+            </p>
+
+            <h3 className="certification-details-title">
+              {selectedCert.title}
+            </h3>
+
+            <p className="certification-details-meta">
+              {selectedCert.issuer} · {selectedCert.date}
+            </p>
+
+            <p className="certification-details-description">
+              {selectedCert.description}
+            </p>
+          </div>
         </div>
       </div>
     </section>
