@@ -34,9 +34,9 @@ export default function Projects() {
             alt="Screenshot of LeadMemory"
             className="project-image"
           />
-          <h3 className="project-title">LeadMemory</h3>
+          <h3 className="project-title">LeadMemory (WIP)</h3>
           <p className="project-description">
-            CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel.
+            CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel. Currently being built.
           </p>
           <div className="project-links">
             <a href="#" target="_blank" className="project-link">
@@ -100,14 +100,14 @@ export default function Projects() {
               target="_blank"
               className="project-link"
             >
-              GitHub Repo (Front End)
+              GitHub Repo (Front)
             </a>
             <a
               href="https://github.com/thomasmullen9999/nc-news"
               target="_blank"
               className="project-link"
             >
-              GitHub Repo (Back End)
+              GitHub Repo (Back)
             </a>
           </div>
         </article>

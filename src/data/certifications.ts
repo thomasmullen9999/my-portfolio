@@ -5,7 +5,7 @@ export const certifications = [
     date: "In Progress",
     description:
       "I am currently working on this qualification.",
-    imagesrc: "/images/na.png",
+    imagesrc: "/images/aws.png",
   },
   {
     title: "Meta Front-End Developer",

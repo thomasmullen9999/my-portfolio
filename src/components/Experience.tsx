@@ -64,105 +64,107 @@ const jobs = [
   },
 
   {
-    id: "maddison-web",
-    company: "Maddison Clarke",
-    role: "Web Developer",
-    date: "Jun 2025 – Apr 2026",
-    logo: "/images/maddison-clarke.png",
-    content: (
-      <>
-        <p>
-          In June 2025, I took over sole responsibility for development from a
-          departing senior developer, maintaining team productivity and
-          preventing delivery delays through proactive codebase and
-          infrastructure management.
-        </p>
+  id: "maddison-clarke",
+  company: "Maddison Clarke",
+  role: "Full-Stack Web Developer",
+  date: "Aug 2024 – Apr 2026",
+  logo: "/images/maddison-clarke.png",
+  content: (
+    <>
+      <div className="experience-role-progression">
+        <div className="experience-role">
+          <h4>Junior Developer</h4>
+          <span>Aug 2024 – Jun 2025</span>
+        </div>
 
-        <p>
-          On a day-to-day basis, I owned system architecture and led project
-          delivery, ensuring alignment across marketing and sales teams. I
-          also oversaw the CRM database, managing lead storage and campaign
-          monitoring.
-        </p>
+        <div className="experience-progression-arrow">→</div>
 
-        <p>Some of my key achievements in this role included:</p>
+        <div className="experience-role">
+          <h4>Web Developer</h4>
+          <span>Jun 2025 – Apr 2026</span>
+        </div>
+      </div>
 
-        <ul className="experience-list">
-          <li>
-            Spearheaded the development of an AI-powered dialler using Twilio
-            and custom algorithms, significantly enhancing lead engagement
-            efficiency.
-          </li>
+      <p>
+        At Maddison Clarke, a financial claims and legal compensation
+        company, I initially joined as a Junior Developer and worked as
+        part of a small development team on a range of commercial projects.
+      </p>
 
-          <li>
-            Designed and integrated RESTful APIs supporting dynamic financial
-            form components, streamlining user submission workflows.
-          </li>
+      <p>
+        During my time as a Junior Developer, I built customer-facing
+        applications and internal tooling while developing my proficiency
+        in TypeScript and Next.js.
+      </p>
 
-          <li>
-            Built a 5-character nurture code algorithm, reducing SMS link
-            length by 80% and cutting campaign costs.
-          </li>
+      <p>Key achievements during this period included:</p>
 
-          <li>
-            Built and maintained accessible React + Prisma admin dashboards,
-            improving data visualisation and enabling marketing teams to
-            manage campaign forms independently.
-          </li>
+      <ul className="experience-list">
+        <li>
+          Built and implemented customer-facing forms for equal pay and
+          legal claims, collecting and handling sensitive user data.
+        </li>
 
-          <li>
-            Developed the entire frontend of an in-house CRM from scratch
-            using Next.js, integrating RESTful APIs to connect with the
-            backend. The system was designed to migrate thousands of existing
-            leads and replace a third-party solution.
-          </li>
-        </ul>
-      </>
-    ),
-  },
+        <li>
+          Developed features for an internal admin site, including graphs,
+          charts, and API-driven lead data displays.
+        </li>
 
-  {
-    id: "maddison-junior",
-    company: "Maddison Clarke",
-    role: "Junior Developer",
-    date: "Aug 2024 – Jun 2025",
-    logo: "/images/maddison-clarke.png",
-    content: (
-      <>
-        <p>
-          At Maddison Clarke, a financial claims and legal compensation
-          company, I worked as part of a small development team on a range of
-          commercial projects.
-        </p>
+        <li>
+          Utilised lead generation tooling to support client acquisition
+          workflows.
+        </li>
+      </ul>
 
-        <p>Key responsibilities and achievements included:</p>
+      <p>
+        In June 2025, following the departure of the senior developer, I
+        took over sole responsibility for development. I became responsible
+        for maintaining the existing systems, managing the technical
+        direction of projects, and ensuring continued delivery across the
+        business.
+      </p>
 
-        <ul className="experience-list">
-          <li>
-            Built and implemented customer-facing forms for equal pay and
-            legal claims, collecting and handling sensitive user data.
-          </li>
+      <p>
+        I owned system architecture and led project delivery, working
+        closely with the marketing and sales teams. I also oversaw the CRM
+        database, managing lead storage and campaign monitoring.
+      </p>
 
-          <li>
-            Developed features for an internal admin site, including graphs,
-            charts, and API-driven lead data displays.
-          </li>
+      <p>Key achievements as Web Developer included:</p>
 
-          <li>
-            Utilised lead generation tooling to support client acquisition
-            workflows.
-          </li>
-        </ul>
+      <ul className="experience-list">
+        <li>
+          Spearheaded the development of an AI-powered dialler using Twilio
+          and custom algorithms, significantly enhancing lead engagement
+          efficiency.
+        </li>
 
-        <p>
-          During this role, I became proficient in TypeScript and Next.js,
-          delivering both customer-facing and internal software across the
-          business.
-        </p>
-      </>
-    ),
-  },
+        <li>
+          Designed and integrated RESTful APIs supporting dynamic financial
+          form components, streamlining user submission workflows.
+        </li>
 
+        <li>
+          Built a 5-character nurture code algorithm, reducing SMS link
+          length by 80% and cutting campaign costs.
+        </li>
+
+        <li>
+          Built and maintained accessible React + Prisma admin dashboards,
+          improving data visualisation and enabling marketing teams to
+          manage campaign forms independently.
+        </li>
+
+        <li>
+          Developed the entire frontend of an in-house CRM from scratch
+          using Next.js, integrating RESTful APIs to connect with the
+          backend. The system was designed to migrate thousands of existing
+          leads and replace a third-party solution.
+        </li>
+      </ul>
+    </>
+  ),
+},
   {
     id: "northcoders",
     company: "Northcoders",

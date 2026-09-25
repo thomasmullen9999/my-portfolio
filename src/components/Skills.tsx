@@ -47,16 +47,7 @@ const categories = [
       "Insomnia",
     ],
   },
-  {
-    title: "Testing",
-    skillNames: [
-      "Jest",
-      "Supertest",
-      "Cypress",
-      "TDD",
-    ],
-  },
-  {
+    {
     title: "Development Tools",
     skillNames: [
       "Git/GitHub",
@@ -70,14 +61,19 @@ const categories = [
     ],
   },
   {
-    title: "Soft Skills/Methodologies",
+    title: "Testing & Soft Skills",
     skillNames: [
+      "Jest",
+      "Supertest",
+      "Cypress",
+      "TDD",
       "Pairing",
       "Comms",
       "SDLC",
       "Agile/SCRUM",
     ],
   },
+
 ];
 
 const normaliseSkillName = (name: string) => {

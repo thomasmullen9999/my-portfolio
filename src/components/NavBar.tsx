@@ -29,7 +29,7 @@ const Navbar = () => {
 
         const rect = element.getBoundingClientRect();
 
-        if (rect.top <= 150 && rect.bottom >= 150) {
+        if (rect.top <= 95 && rect.bottom >= 95) {
           current = id;
           break;
         }
