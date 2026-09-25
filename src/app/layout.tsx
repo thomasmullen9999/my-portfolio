@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thomas Mullen | Software Developer",
+  title: "Thomas Mullen | Software Engineer",
   description: "Portfolio",
 };
 

@@ -30,11 +30,11 @@ export default function Projects() {
 
         <article className="project-card">
           <img
-            src="/images/na.png"
+            src="/images/leadmemory.png"
             alt="Screenshot of LeadMemory"
             className="project-image"
           />
-          <h3 className="project-title">LeadMemory (WIP)</h3>
+          <h3 className="project-title">LeadMemory</h3>
           <p className="project-description">
             CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel. Currently being built.
           </p>
