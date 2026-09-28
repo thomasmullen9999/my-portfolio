@@ -39,11 +39,11 @@ export default function Projects() {
             CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel. Currently being built.
           </p>
           <div className="project-links">
-            <a href="#" target="_blank" className="project-link">
+            <a href="https://leadmemory-weld.vercel.app" target="_blank" className="project-link">
               View Project
             </a>
             <a
-              href="https://github.com/thomasmullen9999/my-portfolio"
+              href="https://github.com/thomasmullen9999/leadmemory"
               target="_blank"
               className="project-link"
             >
@@ -96,14 +96,14 @@ export default function Projects() {
               View Project
             </a>
             <a
-              href="https://github.com/thomasmullen9999/fe-nc-news"
+              href="https://github.com/thomasmullen9999/newslett-frontend"
               target="_blank"
               className="project-link"
             >
               GitHub Repo (Front)
             </a>
             <a
-              href="https://github.com/thomasmullen9999/nc-news"
+              href="https://github.com/thomasmullen9999/newslett-backend"
               target="_blank"
               className="project-link"
             >
@@ -161,7 +161,7 @@ export default function Projects() {
               View Project
             </a>
             <a
-              href="https://github.com/thomasmullen9999/fit-and-strong" // Example link
+              href="https://github.com/thomasmullen9999/strengthsync" // Example link
               target="_blank"
               className="project-link"
             >
