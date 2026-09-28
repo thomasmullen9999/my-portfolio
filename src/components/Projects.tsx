@@ -36,7 +36,7 @@ export default function Projects() {
           />
           <h3 className="project-title">LeadMemory</h3>
           <p className="project-description">
-            CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel. Currently being built.
+            CRM software for analysing leads, built with Next.js and Prisma, deployed via Vercel.
           </p>
           <div className="project-links">
             <a href="https://leadmemory-weld.vercel.app" target="_blank" className="project-link">
