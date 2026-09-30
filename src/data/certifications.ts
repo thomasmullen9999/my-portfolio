@@ -1,98 +1,122 @@
-export const certifications = [
+export type Certification = {
+  title: string;
+  issuer: string;
+  date: string;
+  description: string[];
+  bullets?: string[];
+  imagesrc: string;
+};
+
+export const certifications: Certification[] = [
   {
     title: "AWS Certified Solutions Architect Associate",
     issuer: "AWS",
     date: "In Progress",
-    description:
+    description: [
       "I am currently working on this qualification.",
+      "To broaden my knowledge of cloud computing and gain insight into the technologies used in industry, I decided to undertake the AWS Solutions Architect course.",
+      "The course covers a broad range of skills and knowledge relating to the design, deployment and management of applications and infrastructure within the AWS ecosystem.",
+    ],
+    bullets: [
+      "Designing resilient and highly available architectures",
+      "Defining high-performing architectures",
+      "Designing secure applications and infrastructure",
+      "Designing cost-optimised architectures",
+      "Defining operationally excellent architectures",
+    ],
     imagesrc: "/images/aws.png",
   },
+
+  {
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University / DeepLearningAI / Coursera",
+    date: "In Progress",
+    description: [
+      "I am currently working on this qualification to develop my understanding of machine learning and the mathematical concepts behind modern machine learning algorithms.",
+      "This certification is composed of three courses:",
+    ],
+    bullets: [
+      "Supervised Machine Learning: Regression and Classification",
+      "Advanced Learning Algorithms",
+      "Unsupervised Learning, Recommenders, Reinforcement Learning",
+    ],
+    imagesrc: "/images/coursera.png",
+  },
+
   {
     title: "Meta Front-End Developer",
     issuer: "Coursera",
     date: "2025",
-    description: `I decided to spend some time completing Meta's industry-recognised course covering all key concepts used in front-end web development. This was an extremely useful method of consolidating already existing knowledge I held through hands-on dev experience, whilst simultaneously branching into more advanced and specialised topics concerning React.
-
-This course was produced by the same company that created Facebook and Instagram, and is one of the most widely-used frameworks in modern software development worldwide. The course itself was composed of nine smaller courses, ranging from basic introductory concepts to more complex and higher-level ideas, and took several months to complete, with some courses reaching up to 30+ hours in length.`,
+    description: [
+      "I decided to complete Meta's industry-recognised course covering the key concepts used in modern front-end web development.",
+      "The course provided an opportunity to consolidate existing knowledge gained through hands-on development experience, whilst also allowing me to explore more advanced and specialised React concepts.",
+      "The programme was composed of nine smaller courses, ranging from introductory concepts through to more complex topics. Several of the courses involved 30+ hours of study and practical work.",
+      "The course covered a wide range of front-end development concepts, including modern JavaScript, React, responsive design, accessibility, version control, testing and user interface development.",
+    ],
     imagesrc: "/images/metafrontend.png",
   },
+
   {
     title: "Software Engineering Bootcamp - Certificate of Completion",
     issuer: "Northcoders",
     date: "2024",
-    description: `In 2024 I attended Northcoders, a widely recognised coding bootcamp
-            in the UK, and undertook their software development course. Here, I
-            cemented some of my already-existing skills such as use of HTML/CSS,
-            Git and Javascript, and also learned how to apply different
-            technologies in both front-end and back-end web design. In regards
-            to back-end, I learned how to use SQL (specifically PostgreSQL) to
-            seed a database and integrate with an API using Node.js and Express,
-            using Test Driven Development to perform unit tests. With front-end,
-            I designed the user-facing side of a website with React.js and
-            Bootstrap, which I hosted with Netlify. During the final project
-            phase of the course, I worked as part of a small team of developers
-            to create a mobile application (using React Native, Fireshare,
-            Firestore and Expo) called Trek-It Travel. This app allows a user to
-            view various travel destinations as well as relevant information
-            about local landmarks, restaurants and tourist attractions.`,
+    description: [
+      "In 2024 I attended Northcoders, a UK software development bootcamp, where I completed an intensive full-stack software engineering course.",
+      "The course allowed me to consolidate existing skills such as HTML/CSS, Git and JavaScript, while introducing me to a broad range of technologies used in professional web development.",
+      "On the back end, I learned how to use SQL and PostgreSQL to work with relational databases and integrated databases with APIs using Node.js and Express. I also used Test Driven Development to write and maintain unit tests.",
+      "On the front end, I built user-facing applications using React and Bootstrap, with projects hosted using Netlify.",
+      "During the final project, I worked as part of a small development team to create a mobile application called Trek-It Travel using React Native, Firestore and Expo.",
+    ],
+    bullets: [
+      "HTML/CSS, JavaScript and Git",
+      "Node.js and Express",
+      "SQL and PostgreSQL",
+      "React and Bootstrap",
+      "Test Driven Development",
+      "React Native and Expo",
+      "Firestore",
+      "Agile development and teamwork",
+    ],
     imagesrc: "/images/northcoderscert.png",
   },
+
   {
     title: "CS50's Introduction to Computer Science",
     issuer: "Harvard University",
     date: "2024",
-    description: `            An intensive course with fantastic lectures delivered by Harvard
-            University's David Malan. This course not only acted as an
-            exceptional resource for learning about important theoretical
-            Computer Science concepts, but also provides practical experience in
-            a variety of programming languages, starting with the low-level C
-            language and eventually moving on to more modern higher level
-            languages such as Python, SQL, HTML and CSS. This course covers a
-            range of topics, including algorithms, data structures, databases,
-            web programming, memory, artificial intelligence and cybersecurity,
-            and culminates in a large final project. For my project, I produced
-            a web-based fitness application with Flask (using Python/SQL) which
-            allows users to store information about gym exercises and a list of
-            their favourite foods. They can also track their workouks, keep a
-            diary of their dietary intake and record personal daily statistics
-            (weight, steps, etc.).`,
+    description: [
+      "An intensive course delivered by Harvard University's David Malan covering both theoretical Computer Science concepts and practical programming.",
+      "The course began with the low-level C programming language before progressing to higher-level technologies including Python, SQL, HTML and CSS.",
+      "It provided a broad understanding of algorithms, data structures, databases, web programming, memory, artificial intelligence and cybersecurity, culminating in a substantial final project.",
+      "For my final project, I developed a web-based fitness application using Flask, Python and SQL. The application allowed users to store information about gym exercises and favourite foods, track workouts and dietary intake, and record personal statistics such as weight and steps.",
+    ],
     imagesrc: "/images/cs50xcert.png",
   },
+
   {
     title: "CS50's Introduction to Databases with SQL",
     issuer: "Harvard University",
     date: "2024",
-    description: `            This course from Harvard University focusing on SQL was instrumental
-            to my understanding of relational databases; here I learned more
-            about the CRUD (Create, Read, Update and Delete) methods which are
-            used when manipulating data within applications. During the course,
-            I learned how to create SQL queries and join them together with
-            junction tables and nested SELECT statements. I also learned how to
-            optimise query searches with indexes, create views as shortcuts for
-            frequently requested data, and write code to add new tables and
-            append data to already existing tables. For my final project, I
-            created a database called Jukebox.db which allows a user to store
-            and alter data about bands, albums, musicians and more. This project
-            was created in SQLite3 but I also learned how to use MySQL for
-            scaling with larger sets of data.`,
+    description: [
+      "This Harvard University course was instrumental in developing my understanding of relational databases and SQL.",
+      "I learned how CRUD operations are used when manipulating application data and developed a deeper understanding of relational database design and querying.",
+      "The course covered SQL queries, joins, junction tables, nested SELECT statements, indexes, views and database modification.",
+      "For my final project, I created a database called Jukebox.db which allows users to store and modify information about bands, albums, musicians and related data.",
+      "The project was created using SQLite3, while the course also introduced MySQL and its use when working with larger-scale applications.",
+    ],
     imagesrc: "/images/cs50sqlcert.png",
   },
+
   {
     title: "Computer Science - Diploma of Higher Education (Level 5)",
     issuer: "Manchester Metropolitan University",
     date: "2022",
-    description: `            At MMU I began my journey in Computer Science and programming, and
-            it was here that I grasped many of the concepts which are
-            fundamental to coding such as functional programming vs.
-            object-oriented programming, use of conditionals with if/else
-            if/else statements, and procedural loops (for, while, do while). I
-            developed an understanding of data structures such as linked lists,
-            binary trees and stacks/queues, and worked with other colleagues in
-            a professional development module to create a group project. I
-            learned about Entity Relationship Diagrams and how these can be used
-            to represent relational databases. I also learned about assembly
-            code and machine language, and how human-readable code is converted
-            into machine code which computers can interpret and understand.`,
+    description: [
+      "At Manchester Metropolitan University I began my journey in Computer Science and programming, developing many of the fundamental concepts that underpin modern software development.",
+      "I studied both functional and object-oriented programming, alongside conditionals, loops and a range of core programming principles.",
+      "I developed an understanding of data structures including linked lists, binary trees and stacks and queues, while also working collaboratively on group projects.",
+      "The course also introduced me to Entity Relationship Diagrams, relational database design, assembly code and machine language, giving me a broader understanding of how software is represented and executed at a lower level.",
+    ],
     imagesrc: "/images/diphecert.png",
   },
 ];

@@ -11,7 +11,6 @@ export default function Certifications() {
       <h2 className="certifications-title">Certifications</h2>
 
       <div className="certifications-container">
-        {/* Certificate grid */}
         <div className="certifications-grid" role="tablist">
           {certifications.map((cert) => {
             const isSelected = selectedCert.title === cert.title;
@@ -48,7 +47,6 @@ export default function Certifications() {
           })}
         </div>
 
-        {/* Selected certificate details */}
         <div
           id="certification-details"
           className="certification-details"
@@ -75,9 +73,19 @@ export default function Certifications() {
               {selectedCert.issuer} · {selectedCert.date}
             </p>
 
-            <p className="certification-details-description">
-              {selectedCert.description}
-            </p>
+            <div className="certification-details-description">
+              {selectedCert.description.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+
+              {selectedCert.bullets && selectedCert.bullets.length > 0 && (
+                <ul className="certification-details-list">
+                  {selectedCert.bullets.map((bullet, index) => (
+                    <li key={index}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       </div>
