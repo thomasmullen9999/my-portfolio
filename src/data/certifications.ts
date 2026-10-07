@@ -32,17 +32,20 @@ export const certifications: Certification[] = [
   {
     title: "Machine Learning Specialization",
     issuer: "Stanford University/DeepLearningAI/Coursera",
-    date: "In Progress",
+    date: "2026",
     description: [
-      "I am currently working on this qualification.",
-      "This certification was composed of three courses:",
+      `This course, developed by researchers from Stanford University, covered the major branches of machine learning,
+      including supervised learning (regression and classification), unsupervised learning and reinforcement learning. The content 
+      included a wide range of algorithms which demonstrated how to calculate the efficiency and cost of different learning methods, 
+      as well as a series of labs which acted as a guide on how to use Python libraries such as matlab, matplot, tensorflow and scikit for analysing and viewing data.`,
+      "This certification was composed of three component courses:",
     ],
     bullets: [
       "1) Supervised Machine Learning: Regression and Classification",
       "2) Advanced Learning Algorithms",
       "3) Unsupervised Learning, Recommenders, Reinforcement Learning",
     ],
-    imagesrc: "/images/coursera.png",
+    imagesrc: "/images/mlscert.png",
   },
 
   {
